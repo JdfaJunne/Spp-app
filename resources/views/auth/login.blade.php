@@ -9,7 +9,7 @@
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesdesign" name="author" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ asset('assets') }}/images/favicon.ico">
+    <link rel="shortcut icon" href="{{ asset('assets') }}/images/Mujaka.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 
     <!-- Bootstrap Css -->
@@ -37,9 +37,9 @@
                     <div class="text-center mt-4">
                         <div class="mb-2">
                             <a href="{{ route('login') }}" class="auth-logo">
-                                <img src="{{ asset('assets') }}/images/mujaka-panjang.png" height="30"
+                                <img src="{{ asset('assets') }}/images/mujaka-full.png" height="30"
                                     class="logo-dark mx-auto w-50 h-50" alt="">
-                                <img src="{{ asset('assets') }}/images/mujaka-panjang.png" height="30"
+                                <img src="{{ asset('assets') }}/images/mujaka-full.png" height="30"
                                     class="logo-light mx-auto w-50 h-50" alt="">
                             </a>
                         </div>
@@ -67,7 +67,7 @@
                                         name="password" value="{{ old('password') }}" required autocomplete="password"
                                         autofocus id="password" placeholder="{{ __('Masukan Password Anda') }}">
                                         <span class="input-group-text ">
-                                            <i class="bi bi-eye-slash" id="togglePassword"></i>
+                                            <i style="cursor: pointer" class="bi bi-eye-slash" id="togglePassword"></i>
                                         </span>
                                         @error('password')
                                             <span class="invalid-feedback" role="alert">
@@ -116,7 +116,7 @@
 
     <!-- JAVASCRIPT -->
     <script src="{{ asset('assets') }}/libs/jquery/jquery.min.js"></script>
-    <script src="{{ asset('assets') }}/js/seek.js"></script>
+    <script src="{{ asset('assets') }}/js/pages/seek.js"></script>
     <script src="{{ asset('assets') }}/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('assets') }}/libs/metismenu/metisMenu.min.js"></script>
     <script src="{{ asset('assets') }}/libs/simplebar/simplebar.min.js"></script>

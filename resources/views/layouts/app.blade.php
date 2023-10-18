@@ -69,10 +69,6 @@
                         </form>
 
                         <div class="dropdown dropdown-mega d-none d-lg-block ms-2">
-                            <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-                                Mega Menu
-                                <i class="mdi mdi-chevron-down"></i>
-                            </button>
                             <div class="dropdown-menu dropdown-megamenu">
                                 <div class="row">
                                     <div class="col-sm-8">
@@ -224,10 +220,6 @@
                         </div>
 
                         <div class="dropdown d-none d-sm-inline-block">
-                            <button type="button" class="btn header-item waves-effect"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="" src="{{ asset('assets') }}/images/flags/us.jpg" alt="Header Language" height="16">
-                            </button>
                             <div class="dropdown-menu dropdown-menu-end">
 
                                 <!-- item-->
@@ -404,7 +396,7 @@
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="rounded-circle header-profile-user" src="{{ asset('assets') }}/images/users/cowo.png"
                                     alt="Header Avatar">
-                                <span class="d-none d-xl-inline-block ms-1">Natan</span>
+                                <span class="d-none d-xl-inline-block ms-1">Nathan</span>
                                 <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
@@ -414,16 +406,16 @@
                                 <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end mt-1">11</span><i class="ri-settings-2-line align-middle me-1"></i> Settings</a>
                                 <a class="dropdown-item" href="#"><i class="ri-lock-unlock-line align-middle me-1"></i> Lock screen</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item text-danger" href="#"><i class="ri-shut-down-line align-middle me-1 text-danger"></i> Logout</a>
+                                    <a class="dropdown-item ri-shut-down-line align-middle me-1 text-danger" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                             </form>
                             </div>
                         </div>
-
-                        <div class="dropdown d-inline-block">
-                            <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
-                                <i class="ri-settings-2-line"></i>
-                            </button>
-                        </div>
-
                     </div>
                 </div>
             </header>
@@ -471,7 +463,7 @@
             <!-- ============================================================== -->
 
             <div class="banner">
-                <img src="{{ asset('assets') }}/images/banner.png" alt="" class="">
+                <img src="{{ asset('assets') }}/images/bgs.png" alt="" class="resize">
             </div>
 
             <div class="main-content">
@@ -495,27 +487,6 @@
                         <i class="mdi mdi-close noti-icon"></i>
                     </a>
                 </div>
-
-                <!-- Settings -->
-                <hr class="mt-0" />
-                <h6 class="text-center mb-0">Choose Layouts</h6>
-
-                <div class="p-4">
-                    <div class="mb-2">
-                        <img src="{{ asset('assets') }}/images/layouts/layout-1.jpg" class="img-fluid img-thumbnail" alt="layout-1">
-                    </div>
-
-                    <div class="form-check form-switch mb-3">
-                        <input class="form-check-input theme-choice" type="checkbox" id="light-mode-switch" checked>
-                        <label class="form-check-label" for="light-mode-switch">Light Mode</label>
-                    </div>
-
-                    <div class="mb-2">
-                        <img src="{{ asset('assets') }}/images/layouts/layout-2.jpg" class="img-fluid img-thumbnail" alt="layout-2">
-                    </div>
-
-                </div>
-
             </div> <!-- end slimscroll-menu-->
         </div>
         <!-- /Right-bar -->

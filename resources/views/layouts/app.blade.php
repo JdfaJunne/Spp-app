@@ -4,12 +4,12 @@
 
 <!-- Mirrored from themesdesign.in/upcube/layouts/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Oct 2023 21:04:07 GMT -->
 <head>
-
         <meta charset="utf-8" />
-        <title>@yield('title') | {{ config('app.name') }}</title>
+        <title> @yield('title') | {{ config('app.name') }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesdesign" name="author" />
+
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{ asset('assets') }}/images/Mujaka.png">
 
@@ -29,7 +29,7 @@
         <!-- App Css-->
         <link href="{{ asset('assets') }}/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
         <!-- Banner Css -->
-        <link href="{{ asset('assets') }}/css/banner.css" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets') }}/css/custom.css" rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -39,8 +39,6 @@
 
         <!-- Begin page -->
         <div id="layout-wrapper">
-
-
             <header id="page-topbar">
                 <div class="navbar-header">
                     <div class="d-flex">
@@ -302,94 +300,7 @@
                             </button>
                         </div>
 
-                        <div class="dropdown d-inline-block">
-                            <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
-                                  data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="ri-notification-3-line"></i>
-                                <span class="noti-dot"></span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
-                                aria-labelledby="page-header-notifications-dropdown">
-                                <div class="p-3">
-                                    <div class="row align-items-center">
-                                        <div class="col">
-                                            <h6 class="m-0"> Notifications </h6>
-                                        </div>
-                                        <div class="col-auto">
-                                            <a href="#!" class="small"> View All</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div data-simplebar style="max-height: 230px;">
-                                    <a href="#" class="text-reset notification-item">
-                                        <div class="d-flex">
-                                            <div class="avatar-xs me-3">
-                                                <span class="avatar-title bg-primary rounded-circle font-size-16">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                </span>
-                                            </div>
-                                            <div class="flex-1">
-                                                <h6 class="mb-1">Your order is placed</h6>
-                                                <div class="font-size-12 text-muted">
-                                                    <p class="mb-1">If several languages coalesce the grammar</p>
-                                                    <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 min ago</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="text-reset notification-item">
-                                        <div class="d-flex">
-                                            <img src="{{ asset('assets') }}/images/users/avatar-3.jpg"
-                                                class="me-3 rounded-circle avatar-xs" alt="user-pic">
-                                            <div class="flex-1">
-                                                <h6 class="mb-1">James Lemire</h6>
-                                                <div class="font-size-12 text-muted">
-                                                    <p class="mb-1">It will seem like simplified English.</p>
-                                                    <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 1 hours ago</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="text-reset notification-item">
-                                        <div class="d-flex">
-                                            <div class="avatar-xs me-3">
-                                                <span class="avatar-title bg-success rounded-circle font-size-16">
-                                                    <i class="ri-checkbox-circle-line"></i>
-                                                </span>
-                                            </div>
-                                            <div class="flex-1">
-                                                <h6 class="mb-1">Your item is shipped</h6>
-                                                <div class="font-size-12 text-muted">
-                                                    <p class="mb-1">If several languages coalesce the grammar</p>
-                                                    <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 min ago</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
 
-                                    <a href="#" class="text-reset notification-item">
-                                        <div class="d-flex">
-                                            <img src="{{ asset('assets') }}/images/users/avatar-4.jpg"
-                                                class="me-3 rounded-circle avatar-xs" alt="user-pic">
-                                            <div class="flex-1">
-                                                <h6 class="mb-1">Salena Layfield</h6>
-                                                <div class="font-size-12 text-muted">
-                                                    <p class="mb-1">As a skeptical Cambridge friend of mine occidental.</p>
-                                                    <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 1 hours ago</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="p-2 border-top">
-                                    <div class="d-grid">
-                                        <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
-                                            <i class="mdi mdi-arrow-right-circle me-1"></i> View More..
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
                         <div class="dropdown d-inline-block user-dropdown">
                             <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
@@ -402,15 +313,12 @@
                             <div class="dropdown-menu dropdown-menu-end">
                                 <!-- item-->
                                 <a class="dropdown-item" href="#"><i class="ri-user-line align-middle me-1"></i> Profile</a>
-                                <a class="dropdown-item" href="#"><i class="ri-wallet-2-line align-middle me-1"></i> My Wallet</a>
-                                <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end mt-1">11</span><i class="ri-settings-2-line align-middle me-1"></i> Settings</a>
                                 <a class="dropdown-item" href="#"><i class="ri-lock-unlock-line align-middle me-1"></i> Lock screen</a>
                                 <div class="dropdown-divider"></div>
                                     <a class="dropdown-item ri-shut-down-line align-middle me-1 text-danger" href="{{ route('logout') }}"
                                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                              </form>
@@ -426,13 +334,12 @@
                 <div data-simplebar class="h-100">
 
                     <!-- User details -->
-                    <div class="user-profile text-center mt-3">
+                    <div class="user-profile text-center mt-5 mb-4">
                         <div class="">
                             <img src="{{ asset('assets') }}/images/users/cowo.png" alt="" class="avatar-md rounded-circle">
                         </div>
-                        <div class="mt-3">
-                            <h4 class="font-size-16 mb-1">Natan Situmeang</h4>
-                            <span class="text-muted"><i class="ri-record-circle-line align-middle font-size-14 text-success"></i> Online</span>
+                        <div class="mt-3>
+                            <h4 class="font-size-16 mb-1">Administrator</h4>
                         </div>
                     </div>
 
@@ -440,15 +347,7 @@
                     <div id="sidebar-menu">
                         <!-- Left Menu Start -->
                         <ul class="metismenu list-unstyled" id="side-menu">
-                            <li class="menu-title">Menu</li>
-
-                            <li>
-                                <a href="index-2.html" class="waves-effect">
-                                    <i class="ri-dashboard-line"></i><span class="badge rounded-pill bg-success float-end">3</span>
-                                    <span>Dashboard</span>
-                                </a>
-                            </li>
-
+                            @include('layouts.sidebar')
                         </ul>
                     </div>
                     <!-- Sidebar -->
@@ -462,13 +361,15 @@
             <!-- Start right Content here -->
             <!-- ============================================================== -->
 
-            <div class="banner">
-                <img src="{{ asset('assets') }}/images/bgs.png" alt="" class="resize">
+
+            <div class="container">
+                <div class="row">
+                <img src="{{ asset('assets') }}/images/bgs.png" id="background" class="card-img-top img-fluid backgroundimage">
+                </div>
             </div>
 
-            <div class="main-content">
-
-                <!-- End Page-content -->
+            <div class="main-content mt-5">
+               @yield('content')
 
             </div>
             <!-- end main content-->

@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\MapelController;
+use App\Http\Controllers\ClassroomController;
+use App\Http\Controllers\TeacherController;
+use App\Models\Classroom;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +20,6 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 
@@ -25,6 +27,8 @@ Route::redirect('/', '/login');
 
 Route::resource('/mapel', MapelController::class);
 Route::resource('/jurusan', JurusanController::class);
+Route::resource('/kelas', ClassroomController::class);
+Route::resource('/guru', TeacherController::class);
 
 Auth::routes([
     'register' => false

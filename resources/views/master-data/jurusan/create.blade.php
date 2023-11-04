@@ -16,7 +16,7 @@
     <div class="container mt-5 mb-5">
         <div class="row">
             <div class="col-md-12">
->
+
                 @if (session('success'))
                 <div class="alert alert-success">
                     {{ session('success') }}
@@ -34,7 +34,6 @@
 
                         <form action="{{ route('jurusan.store') }}" method="POST">
                             @csrf
-
                             <div class="form-group">
                                 <label for="nama">Jurusan</label>
                                 <input type="text" class="form-control @error('nama') is-invalid @enderror"
@@ -50,7 +49,6 @@
 
                             <button type="submit" class="btn btn-md btn-primary">Save</button>
                             <a href="{{ route('jurusan.index') }}" class="btn btn-md btn-danger">back</a>
-
                         </form>
                     </div>
                 </div>

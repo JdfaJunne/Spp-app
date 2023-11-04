@@ -14,4 +14,9 @@ class Mapel extends Model
     protected $fillable = [
         'nama',
     ];
+
+    public function teachers()
+    {
+        return $this->hasMany(teacher::class);
+    }
 }

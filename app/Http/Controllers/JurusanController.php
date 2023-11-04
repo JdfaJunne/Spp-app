@@ -25,7 +25,7 @@ class JurusanController extends Controller {
 
     public function store(JurusanFormRequest $request)
     {
-        $ $jurusans = $request->validated();
+        $jurusans = $request->validated();
 
         $jurusans = jurusan::create([
             'nama' => $request->nama,
@@ -51,7 +51,7 @@ class JurusanController extends Controller {
     public function edit($id)
     {
         $jurusans = jurusan::findOrFail($id);
-        return view('master-data. jurusan.edit', compact('jurusans'));
+        return view('master-data.jurusan.edit', compact('jurusans'));
     }
 
     public function update(JurusanFormRequest $request, $id)

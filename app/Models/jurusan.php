@@ -13,4 +13,9 @@ class jurusan extends Model
     protected $fillable = [
         'nama',
     ];
+
+    public function classrooms()
+    {
+        return $this->hasMany(Classroom::class);
+    }
 }
